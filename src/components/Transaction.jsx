@@ -1,19 +1,13 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalState";
+import React from 'react'
 
-
-export const Transaction = ({ transaction }) => {
-
+const Transaction = ({transaction}) => {
     const sign = transaction.amount < 0 ? '-' : '+';
-
-    const { deleteTransaction } = useContext(GlobalContext);
-
-    return(
-        <>
-            <li key={transaction.id} className={transaction.amount < 0 ? 'minus': 'plus'}>
-                {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
-                <button onClick={() => deleteTransaction(transaction.id)} className="delete-btn">x</button>
-            </li>
-        </>
-    )
+  return (
+    <li key={transaction.id} className={transaction.amount < 0 ? 'minus' : 'plus'}>
+            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
+            <button onClick={() =>{}} className='delete-btn'>x</button>
+        </li>
+  )
 }
+
+export default Transaction

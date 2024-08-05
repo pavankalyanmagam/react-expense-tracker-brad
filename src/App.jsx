@@ -1,11 +1,10 @@
-import Header from "./components/Header.jsx";
-
 import "./App.css";
-import Balance from "./components/Balance.jsx";
-import IncomeExpenses from "./components/IncomeExpenses.jsx";
-import TransactionList from "./components/TransactionList.jsx";
-import AddTransaction from "./components/AddTransaction.jsx";
-import { GlobalProvider } from "./context/GlobalState.jsx";
+import AddTransaction from "./components/AddTransaction";
+import Balance from "./components/Balance";
+import Header from "./components/Header";
+import InceomExpense from "./components/InceomExpense";
+import TransactionList from "./components/TransactionList";
+import { GlobalProvider } from "./context/GlobalState";
 
 const App = () => {
   return (
@@ -14,7 +13,7 @@ const App = () => {
         <Header />
         <div className="container">
           <Balance />
-          <IncomeExpenses />
+          <InceomExpense />
           <TransactionList />
           <AddTransaction />
         </div>
